@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    <head>
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        title incripcion
+    </head>
+    body(class="bg-dark text-white")
+        center 
+            br
+            h2="bienvenido "+alumno[0].nombre
+            br
+            br
+            table
+                tr 
+                    th selceccione un curso para su inscripción
+                tr
+                tr    
+                    td(style="text-align: center;") 
+                        form(action="inscribir_alumno_en_curso", method="post")
+                            input(type="hidden", name="id" , value=alumno[0].id)
+                            select(name="curso")
+                                option(value="") no inscribir curso.... 
+                                each curso in cursos
+                                    option(value=curso.cod_curso)=curso.nombre 
+                            tr
+                                td(style="text-align: center;")
+                                    button(style="background-color:blue;padding:5px 5px 5px 5px;border-radius:5px;color:white;"  type="submit") inscribir
+                                    button(style="background-color:red;padding: 5px 5px 5px 5px;  border-radius: 5px;") 
+                                        <a style="text-decoration: none; color:white" , href="alumnos">cancelar ↺</a>

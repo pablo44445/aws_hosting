@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>cursos</title>
+</head>
+<body class="bg-dark text-white">
+    center 
+        br
+        br
+        h1 cursos
+        br
+        <table border="2" , style="width: 35%;">
+            tr
+                <th>codigo</th>
+                <th>nombre</th>
+                <th>cupos</th>
+                 th 
+
+                each curso in cursos
+                    tr
+                        td=curso.cod_curso
+                        td=curso.nombre 
+                        td=curso.capacidad
+                        td  
+                            form(action="alumnos_inscritos", method="post")
+                                input(type="hidden", name="cod_curso",value=curso.cod_curso)
+                                button(style="background-color:blue;padding: 5px 5px 5px 5px;border-radius: 5px; color:white" , type="submit") alumnos inscritos
+
+        </table>
+        button(style="background-color:blue;padding: 5px 5px 5px 5px;  border-radius: 5px;") 
+            <a style="text-decoration: none; color:white" , href="/alumnos">ver alumnos</a>
+        button(style="background-color:red;padding: 5px 5px 5px 5px;  border-radius: 5px;") 
+            <a style="text-decoration: none; color:white" , href="agrear_curso">agregar curso</a>
+</body>
+
+</html>

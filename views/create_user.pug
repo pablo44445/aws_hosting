@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        title inicio de secion
+<body class="bg-dark text-white">
+            center
+                br         
+                br
+                br
+                <table border="2" style="width: 30%; text-align:center;">
+                    th 
+                        p
+                            h4 crear un usurario
+                    tr
+                    td
+                        img(src="https://image.flaticon.com/icons/png/512/149/149071.png", alt="Usuario",width="150", height="150")
+                    tr
+                    tr
+                                td correo
+                    td
+                        form(action="crear_usuario", method="post")
+                            input(type="email", name="correo" ,placeholder="correo",required,max=45)
+                            tr
+                                td nombre
+                            tr 
+                            td 
+                                input(type="text", name="nombre" ,placeholder="nombre",required,max=30) 
+                            tr
+                                td apellido
+                            tr 
+                            td 
+                                input(type="text", name="apellido" ,placeholder="apellido",required,max=30) 
+                            tr
+                                td clave
+                            tr 
+                            td 
+                                input(type="password", name="clave" ,placeholder="clave",required,max=5)
+                            tr
+                                td(style="color:black;") ----
+                            tr 
+                            td 
+                                <button type="sudmit" class="btn btn-danger">crear ususario</button>
+                            
+                                <button class="btn btn-primary">
+                                    a(href="login" style="color:white; text-decoration:none;") volver a login
+                                </button>
+
+                            tr
+                                td(style="color:black;") ----              
+                </table> 
+                br   
+                if(usuario_creado==true)
+                    <div class="alert alert-success" role="alert">
+                        This ¡El usuario ha sido creado exitosamente!
+                    </div>
+                if( usuario_ya_existente==true)
+                    <div class="alert    alert-warning alert-danger" role="alert">
+                    <h4 class="alert-heading">error usuario no ha sido creado!!!</h4>
+                    <p>el correo ingresado ya esta registrado prueba con otro correo</p>
+</div>
+</body>

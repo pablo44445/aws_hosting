@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        title agregar curso
+    body(class="bg-dark text-white")
+        br
+        br 
+        <center>
+        <h1>agregar nuevo curso</h1>
+        br
+        <table style="width: 20%;">
+            form(action="add_course_to_sql", method="post") 
+                tr
+                    td codigo
+                    td
+                        input(type="text", name="cod_curso" ,max=10 , required)
+                tr 
+                    td nombre
+                    td 
+                        input(type="text", name="nombre",max=30,required)
+                tr 
+                    td cupos
+                    td
+                        input(type="number", name="capacidad" , max=30,required ,placeholder="maximo 30")
+                tr 
+                    td
+                    td
+                        button(style="background-color:red;padding: 5px 5px 5px 5px; color:white; border-radius: 5px;",type="submit") Agregar
+
+                        button(style="background-color:blue;padding: 5px 5px 5px 5px;  border-radius: 5px;") 
+                            <a style="text-decoration: none; color:white" , href="/cursos">Cancelar ↺</a>    
+        </table>

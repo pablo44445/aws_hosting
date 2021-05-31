@@ -1,0 +1,34 @@
+create database gestor_cursos;
+
+use gestor_cursos;
+
+create table Alumno(
+    id int auto_increment primary key,
+    nombre varchar(30) not null,
+    apellido varchar(30) not null,
+    matricula varchar(11) not null,
+    curso_inscrito varchar(20)
+);
+
+create table Curso(
+    cod_curso varchar(20) primary key,
+    nombre varchar(30) not null,
+    capacidad int not null,
+    cupos int not null
+);
+
+create table user(
+    id int auto_increment primary key,
+    correo varchar(45) not null,
+    nombre varchar(30) not null,
+    apellido varchar(30) not null,
+    clave varchar(100) not null 
+);
+
+
+insert into alumno(id,matricula,nombre,apellido,curso_inscrito) 
+value(1,"20646865319","juan","gomes","");
+
+insert into curso(cod_curso,nombre,capacidad,cupos) 
+value("JSD50","diceño de datos",20,0);
+
