@@ -7,10 +7,10 @@ const bcrypt = require("bcryptjs")
 const app = express()
 
 var conection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "gestor_cursos"
+    host: "gestorcursos.caq3kx9dup6r.us-east-2.rds.amazonaws.com",
+    user: "admin",
+    password: "12345678",
+    database: "gestorcursos"
 })
 
 conection.connect((err) => {

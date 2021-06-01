@@ -1,8 +1,8 @@
-create database gestor_cursos;
+create database gestorcursos;
 
-use gestor_cursos;
+use gestorcursos;
 
-create table Alumno(
+create table alumno(
     id int auto_increment primary key,
     nombre varchar(30) not null,
     apellido varchar(30) not null,
@@ -10,7 +10,7 @@ create table Alumno(
     curso_inscrito varchar(20)
 );
 
-create table Curso(
+create table curso(
     cod_curso varchar(20) primary key,
     nombre varchar(30) not null,
     capacidad int not null,
